@@ -16,10 +16,12 @@ window.addEventListener('scroll', () => {
   document.querySelectorAll('section').forEach(section => {
     let id = section.getAttribute('id');
     let link = document.querySelector('a.nav-link[href="#' + id + '"]');
-    if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
+    if (link) {
+      if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
     }
   });
 });

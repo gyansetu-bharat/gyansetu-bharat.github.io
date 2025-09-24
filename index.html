@@ -6,15 +6,16 @@
   <title>ज्ञानसेतु (GyanSetu)</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="js/script.js" defer></script>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="assets/logo/gyansetu-logo.png" height="40" alt="Logo" class="me-2">
-        <span>ज्ञानसेतु</span>
+      <a class="navbar-brand d-flex align-items-center fw-bold text-orange" href="#">
+        <img src="assets/logo/gyansetu-logo.png" height="40" alt="Logo" class="me-2"> ज्ञानसेतु
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -34,21 +35,18 @@
   </nav>
 
   <!-- Hero -->
-  <header class="hero text-white text-center d-flex align-items-center">
-    <div class="container">
-      <h1 class="display-4">ज्ञानसेतु</h1>
-      <p class="lead">Bridging Knowledge Across Time</p>
-      <div class="social-icons">
-        <a href="#"><i class="bi bi-twitter"></i></a>
-        <a href="#"><i class="bi bi-instagram"></i></a>
-        <a href="#"><i class="bi bi-youtube"></i></a>
-      </div>
+  <header class="hero d-flex align-items-center text-center">
+    <div class="container" data-aos="fade-up">
+      <h1 class="display-3 fw-bold">ज्ञानसेतु</h1>
+      <p class="lead mb-4">Bridging Knowledge Across Time</p>
+      <a href="#library" class="btn btn-orange me-3">Explore Knowledge</a>
+      <a href="https://youtu.be/your-teaser-link" target="_blank" class="btn btn-outline-light">Watch Teaser Video</a>
     </div>
   </header>
 
   <!-- Vision -->
-  <section id="vision" class="section">
-    <div class="container text-center">
+  <section id="vision" class="section bg-light">
+    <div class="container text-center" data-aos="fade-up">
       <h2 class="section-title">Our Vision</h2>
       <p class="lead">
         A platform that highlights the achievements of Bharat from ancient times.
@@ -59,14 +57,14 @@
   </section>
 
   <!-- Gallery -->
-  <section id="gallery" class="section bg-light">
+  <section id="gallery" class="section">
     <div class="container text-center">
       <h2 class="section-title">Photo Gallery</h2>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="zoom-in">
           <div class="feature-card">
-            <img src="assets/gallery/photo1.jpg" class="img-fluid rounded shadow" alt="Gallery Image">
-            <h5>Exhibit 1</h5>
+            <img src="assets/gallery/photo1.jpg" class="img-fluid rounded" alt="Gallery Image">
+            <h5 class="mt-2">Exhibit 1</h5>
           </div>
         </div>
       </div>
@@ -74,11 +72,11 @@
   </section>
 
   <!-- Blogs -->
-  <section id="blogs" class="section">
+  <section id="blogs" class="section bg-light">
     <div class="container">
       <h2 class="section-title">Blogs</h2>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-right">
           <div class="feature-card">
             <img src="assets/blog/blog1.jpg" class="img-fluid mb-3" alt="Blog">
             <h5>Vedic Mathematics Simplified</h5>
@@ -87,7 +85,7 @@
             <a href="assets/blog/vedic-math.pdf" class="btn btn-orange" download>Download PDF</a>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-left">
           <div class="feature-card">
             <img src="assets/blog/blog2.jpg" class="img-fluid mb-3" alt="Blog">
             <h5>Ayurveda and Science</h5>
@@ -101,14 +99,14 @@
   </section>
 
   <!-- Newsletter -->
-  <section id="newsletter" class="section bg-light">
-    <div class="container">
+  <section id="newsletter" class="section">
+    <div class="container" data-aos="fade-up">
       <h2 class="section-title">Newsletter</h2>
-      <div class="feature-card">
+      <div class="feature-card mb-3">
         <p><strong>September 2025 Issue</strong></p>
         <a href="assets/newsletter/newsletter-sept2025.pdf" class="btn btn-orange" download>Download</a>
       </div>
-      <div class="feature-card mt-3">
+      <div class="feature-card">
         <p><strong>August 2025 Issue</strong></p>
         <a href="assets/newsletter/newsletter-aug2025.pdf" class="btn btn-orange" download>Download</a>
       </div>
@@ -116,8 +114,8 @@
   </section>
 
   <!-- Library -->
-  <section id="library" class="section">
-    <div class="container">
+  <section id="library" class="section bg-light">
+    <div class="container" data-aos="fade-up">
       <h2 class="section-title">Library</h2>
       <div class="row">
         <div class="col-md-4"><div class="feature-card">Dispelling Myths</div></div>
@@ -128,8 +126,8 @@
   </section>
 
   <!-- Merchandise -->
-  <section id="merchandise" class="section bg-light">
-    <div class="container text-center">
+  <section id="merchandise" class="section">
+    <div class="container text-center" data-aos="zoom-in">
       <h2 class="section-title">Merchandise</h2>
       <div class="row">
         <div class="col-md-3"><div class="feature-card"><img src="assets/merchandise/item1.jpg" class="img-fluid mb-2"><p>Notebook</p></div></div>
@@ -141,8 +139,8 @@
   </section>
 
   <!-- Support -->
-  <section id="support" class="section text-center text-white bg-dark">
-    <div class="container">
+  <section id="support" class="section bg-dark text-white text-center">
+    <div class="container" data-aos="fade-up">
       <h2 class="section-title text-orange">Support Us</h2>
       <p>Help sustain GyanSetu through donations, volunteering, or sharing our work.</p>
       <a href="#" class="btn btn-orange">Donate</a>
@@ -160,6 +158,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
