@@ -1,80 +1,70 @@
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #fdfdfd;
+/* Reset-ish */
+:root{
+  --accent: #0a58ca;         /* CoMuRoS blue accent */
+  --hero-grad-a:#0f172a;     /* slate-900 */
+  --hero-grad-b:#0a1f44;     /* deep blue */
 }
 
-.section {
-  padding: 60px 0;
-}
+html, body{scroll-behavior:smooth}
+body{font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';}
 
-.section-title {
-  font-weight: 700;
-  margin-bottom: 30px;
-  color: #e76f00;
-  text-align: center;
+/* Navbar like CoMuRoS */
+.navbar{
+  background: transparent;
+  transition: background .3s, box-shadow .3s;
 }
-
-.feature-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+.navbar.scrolled{
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
-
-.feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+.navbar .nav-link{
+  color:#0b1220;
+  padding:.5rem .75rem;
+  position:relative;
+  font-weight:500;
 }
-
-.btn-orange {
-  background-color: #e76f00;
-  color: #fff;
-  border: none;
+.navbar .nav-link:hover{color:#0b1220}
+.navbar .nav-link::after{
+  content:''; position:absolute; left:50%; transform:translateX(-50%);
+  bottom:-2px; height:2px; width:0; background:var(--accent); transition:width .25s;
 }
-
-.btn-orange:hover {
-  background-color: #cc5f00;
-  color: #fff;
-}
-
-.hero {
-  background: linear-gradient(135deg, #1a1a1a, #e76f00);
-  height: 100vh;
-  color: white;
-  display: flex;
-  align-items: center;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-}
-
-.navbar .nav-link {
-  position: relative;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
-.navbar .nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
-  background-color: #e76f00;
-  transition: width 0.3s;
-}
-
 .navbar .nav-link:hover::after,
-.navbar .nav-link.active::after {
-  width: 100%;
-}
+.navbar .nav-link.active::after{ width:60%; }
 
-.social-icons a {
-  color: white;
-  margin: 0 10px;
-  font-size: 1.5rem;
+/* Hero */
+.hero{
+  min-height: 88vh;
+  background: radial-gradient(1200px 600px at 70% 20%, rgba(255,255,255,.05), transparent 60%),
+              linear-gradient(135deg, var(--hero-grad-a), var(--hero-grad-b));
+  color:#e9eef8;
+  padding-top: 80px; /* leave space for fixed nav */
 }
+.hero-title{ letter-spacing:.5px; }
+.hero-sub{ color:#c7d2fe; }
+.hero .btn{ border-radius:.75rem; box-shadow:0 6px 12px rgba(0,0,0,.15); }
+.btn-primary{ background:var(--accent); border-color:var(--accent); }
+.btn-primary:hover{ filter:brightness(0.95); }
+.btn-outline-light{ color:#eef2ff; border-color:#cbd5e1; }
+.btn-outline-light:hover{ background:#e2e8f0; color:#0b1220; }
 
-.social-icons a:hover {
-  color: #e76f00;
+/* Sections */
+.section{ padding: 72px 0; }
+.section.alt{ background:#f8fafc; }
+.section-title{ font-weight:800; margin-bottom:24px; }
+
+/* Cards */
+.feature-card{
+  background:#ffffff;
+  border-radius:16px;
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
+  overflow:hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
+.feature-card:hover{ transform: translateY(-6px); box-shadow:0 16px 30px rgba(0,0,0,.08); }
+
+/* Utility */
+.w-lg-75{max-width:75ch}
+footer{background:#fff}
+/* Make toggler icon visible on transparent bg */
+.navbar-toggler{ border:none }
+.navbar-toggler-icon{ filter: invert(1) brightness(0.2); }

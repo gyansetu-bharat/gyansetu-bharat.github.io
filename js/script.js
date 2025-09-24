@@ -1,27 +1,34 @@
-// Smooth scrolling and nav active link highlight
-document.querySelectorAll('a.nav-link').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    if (this.getAttribute('href').startsWith('#')) {
+// Transparent navbar that becomes solid on scroll
+const nav = document.getElementById('topNav');
+function onScroll(){
+  if(window.scrollY > 60){ nav.classList.add('scrolled'); }
+  else{ nav.classList.remove('scrolled'); }
+}
+document.addEventListener('scroll', onScroll);
+onScroll();
+
+// Smooth scroll + active link underline
+document.querySelectorAll('a.nav-link').forEach(link => {
+  link.addEventListener('click', (e) => {
+    if(link.getAttribute('href').startsWith('#')){
       e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
+      const id = link.getAttribute('href');
+      document.querySelector(id).scrollIntoView({behavior:'smooth'});
     }
   });
 });
 
-// Highlight active nav link on scroll
+// Active state as you scroll
 window.addEventListener('scroll', () => {
-  let fromTop = window.scrollY + 80;
-  document.querySelectorAll('section').forEach(section => {
-    let id = section.getAttribute('id');
-    let link = document.querySelector('a.nav-link[href="#' + id + '"]');
-    if (link) {
-      if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
+  const pos = window.scrollY + 120;
+  document.querySelectorAll('section').forEach(sec => {
+    const id = sec.getAttribute('id');
+    const a = document.querySelector('a.nav-link[href="#'+id+'"]');
+    if(!a) return;
+    if(sec.offsetTop <= pos && sec.offsetTop + sec.offsetHeight > pos){
+      a.classList.add('active');
+    }else{
+      a.classList.remove('active');
     }
   });
 });

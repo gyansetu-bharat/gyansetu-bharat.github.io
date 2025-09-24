@@ -1,17 +1,12 @@
-# GyanSetu Website (CoMuRoS-Style)
+# GyanSetu — CoMuRoS-style clone
 
-This is the official **GyanSetu (ज्ञानसेतु)** website with gradient hero, orange-accent theme, and animations inspired by CoMuRoS.
+This build follows the CoMuRoS layout closely:
+- Transparent navbar with underline-on-hover
+- Full-screen gradient hero with centered title and buttons
+- Feature-card sections for Blogs, Newsletter, Library, Merchandise
+- No logo in navbar; logo appears in hero
 
-## 🚀 How to deploy
-1. Create a repository named **gyansetu-bharat.github.io** (public).
-2. Upload/unzip these files.
-3. Enable GitHub Pages in Settings → Pages → Deploy from branch (main, root).
-
-## Sections
-- Vision
-- Gallery
-- Blogs
-- Newsletter
-- Library
-- Merchandise
-- Support Us
+How to deploy:
+1) Create public repo named gyansetu.github.io
+2) Upload these files to root
+3) Enable GitHub Pages → Deploy from branch (main, root)

@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ज्ञानसेतु (GyanSetu)</title>
+
+  <!-- Core -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- JS (our script handles transparent navbar + active link underline on scroll) -->
   <script src="js/script.js" defer></script>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+  <!-- Navbar: transparent over hero, no logo here -->
+  <nav id="topNav" class="navbar navbar-expand-lg fixed-top py-3">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center fw-bold text-orange" href="#">
-        <img src="assets/logo/gyansetu-logo.png" height="40" alt="Logo" class="me-2"> ज्ञानसेतु
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#vision">Vision</a></li>
-          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="#blogs">Blogs</a></li>
           <li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
           <li class="nav-item"><a class="nav-link" href="#library">Library</a></li>
           <li class="nav-item"><a class="nav-link" href="#merchandise">Merchandise</a></li>
-          <li class="nav-item"><a class="nav-link" href="#support">Support Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <header class="hero d-flex align-items-center text-center">
-    <div class="container" data-aos="fade-up">
-      <h1 class="display-3 fw-bold">ज्ञानसेतु</h1>
-      <p class="lead mb-4">Bridging Knowledge Across Time</p>
-      <a href="#library" class="btn btn-orange me-3">Explore Knowledge</a>
-      <a href="https://youtu.be/your-teaser-link" target="_blank" class="btn btn-outline-light">Watch Teaser Video</a>
+  <!-- HERO (Home) -->
+  <header id="home" class="hero d-flex align-items-center">
+    <div class="container text-center">
+      <img src="assets/logo/gyansetu-logo.png" height="80" alt="GyanSetu Logo" class="mb-3 hero-logo">
+      <h1 class="display-3 fw-bold hero-title">GyanSetu</h1>
+      <p class="lead hero-sub">Bridging Knowledge Across Time</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+        <a href="#library" class="btn btn-primary px-4 py-2">Explore Knowledge</a>
+        <a href="#blogs" class="btn btn-outline-light px-4 py-2">Read Blogs</a>
+        <a href="https://youtu.be/VIDEO_ID" target="_blank" class="btn btn-outline-light px-4 py-2">Teaser Video</a>
+      </div>
     </div>
   </header>
 
   <!-- Vision -->
-  <section id="vision" class="section bg-light">
-    <div class="container text-center" data-aos="fade-up">
+  <section id="vision" class="section">
+    <div class="container text-center">
       <h2 class="section-title">Our Vision</h2>
-      <p class="lead">
+      <p class="lead w-lg-75 mx-auto">
         A platform that highlights the achievements of Bharat from ancient times.
         Which not only gives confidence but also inspire people to dedicate their
         time and energy towards the nation’s progress.
@@ -56,43 +60,32 @@
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section id="gallery" class="section">
-    <div class="container text-center">
-      <h2 class="section-title">Photo Gallery</h2>
-      <div class="row">
-        <div class="col-md-4" data-aos="zoom-in">
-          <div class="feature-card">
-            <img src="assets/gallery/photo1.jpg" class="img-fluid rounded" alt="Gallery Image">
-            <h5 class="mt-2">Exhibit 1</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Blogs -->
-  <section id="blogs" class="section bg-light">
+  <section id="blogs" class="section alt">
     <div class="container">
-      <h2 class="section-title">Blogs</h2>
-      <div class="row">
-        <div class="col-md-6" data-aos="fade-right">
-          <div class="feature-card">
-            <img src="assets/blog/blog1.jpg" class="img-fluid mb-3" alt="Blog">
-            <h5>Vedic Mathematics Simplified</h5>
-            <p class="text-muted">20 Sept 2025</p>
-            <p>A journey through ancient Indian mental math techniques.</p>
-            <a href="assets/blog/vedic-math.pdf" class="btn btn-orange" download>Download PDF</a>
-          </div>
+      <h2 class="section-title text-center">Blogs</h2>
+      <div class="row g-4 mt-2">
+        <div class="col-md-6">
+          <article class="feature-card h-100">
+            <img src="assets/blog/blog1.jpg" class="card-img-top rounded-3" alt="Blog">
+            <div class="p-4">
+              <h5 class="mb-1">Vedic Mathematics Simplified</h5>
+              <div class="text-muted small mb-2">20 Sept 2025</div>
+              <p class="mb-3">A journey through ancient Indian mental math techniques.</p>
+              <a class="btn btn-primary" href="assets/blog/vedic-math.pdf" download>Download PDF</a>
+            </div>
+          </article>
         </div>
-        <div class="col-md-6" data-aos="fade-left">
-          <div class="feature-card">
-            <img src="assets/blog/blog2.jpg" class="img-fluid mb-3" alt="Blog">
-            <h5>Ayurveda and Science</h5>
-            <p class="text-muted">10 Sept 2025</p>
-            <p>Exploring ancient health systems and their relevance today.</p>
-            <a href="assets/blog/ayurveda.pdf" class="btn btn-orange" download>Download PDF</a>
-          </div>
+        <div class="col-md-6">
+          <article class="feature-card h-100">
+            <img src="assets/blog/blog2.jpg" class="card-img-top rounded-3" alt="Blog">
+            <div class="p-4">
+              <h5 class="mb-1">Ayurveda and Science</h5>
+              <div class="text-muted small mb-2">10 Sept 2025</div>
+              <p class="mb-3">Exploring ancient health systems and their relevance today.</p>
+              <a class="btn btn-primary" href="assets/blog/ayurveda.pdf" download>Download PDF</a>
+            </div>
+          </article>
         </div>
       </div>
     </div>
@@ -100,65 +93,66 @@
 
   <!-- Newsletter -->
   <section id="newsletter" class="section">
-    <div class="container" data-aos="fade-up">
-      <h2 class="section-title">Newsletter</h2>
-      <div class="feature-card mb-3">
-        <p><strong>September 2025 Issue</strong></p>
-        <a href="assets/newsletter/newsletter-sept2025.pdf" class="btn btn-orange" download>Download</a>
+    <div class="container">
+      <h2 class="section-title text-center">Newsletter</h2>
+      <div class="feature-card p-4 mb-3">
+        <div class="d-flex justify-content-between flex-wrap gap-2 align-items-center">
+          <strong>September 2025 Issue</strong>
+          <a class="btn btn-primary btn-sm" href="assets/newsletter/newsletter-sept2025.pdf" download>Download</a>
+        </div>
       </div>
-      <div class="feature-card">
-        <p><strong>August 2025 Issue</strong></p>
-        <a href="assets/newsletter/newsletter-aug2025.pdf" class="btn btn-orange" download>Download</a>
+      <div class="feature-card p-4">
+        <div class="d-flex justify-content-between flex-wrap gap-2 align-items-center">
+          <strong>August 2025 Issue</strong>
+          <a class="btn btn-primary btn-sm" href="assets/newsletter/newsletter-aug2025.pdf" download>Download</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Library -->
-  <section id="library" class="section bg-light">
-    <div class="container" data-aos="fade-up">
-      <h2 class="section-title">Library</h2>
-      <div class="row">
-        <div class="col-md-4"><div class="feature-card">Dispelling Myths</div></div>
-        <div class="col-md-4"><div class="feature-card">Authentic Sources</div></div>
-        <div class="col-md-4"><div class="feature-card">Knowledge Systems</div></div>
+  <section id="library" class="section alt">
+    <div class="container">
+      <h2 class="section-title text-center">Library</h2>
+      <div class="row g-4 mt-2">
+        <div class="col-md-4"><div class="feature-card p-4 text-center">Dispelling Myths</div></div>
+        <div class="col-md-4"><div class="feature-card p-4 text-center">Authentic Sources</div></div>
+        <div class="col-md-4"><div class="feature-card p-4 text-center">Knowledge Systems</div></div>
       </div>
     </div>
   </section>
 
   <!-- Merchandise -->
   <section id="merchandise" class="section">
-    <div class="container text-center" data-aos="zoom-in">
-      <h2 class="section-title">Merchandise</h2>
-      <div class="row">
-        <div class="col-md-3"><div class="feature-card"><img src="assets/merchandise/item1.jpg" class="img-fluid mb-2"><p>Notebook</p></div></div>
-        <div class="col-md-3"><div class="feature-card"><img src="assets/merchandise/item2.jpg" class="img-fluid mb-2"><p>Bookmark</p></div></div>
-        <div class="col-md-3"><div class="feature-card"><img src="assets/merchandise/item3.jpg" class="img-fluid mb-2"><p>T-shirt</p></div></div>
-        <div class="col-md-3"><div class="feature-card"><img src="assets/merchandise/item4.jpg" class="img-fluid mb-2"><p>Tote Bag</p></div></div>
+    <div class="container">
+      <h2 class="section-title text-center">Merchandise</h2>
+      <div class="row g-4 mt-1 text-center">
+        <div class="col-6 col-md-3"><div class="feature-card p-3"><img src="assets/merchandise/item1.jpg" class="img-fluid rounded mb-2"><div>Notebook</div></div></div>
+        <div class="col-6 col-md-3"><div class="feature-card p-3"><img src="assets/merchandise/item2.jpg" class="img-fluid rounded mb-2"><div>Bookmark</div></div></div>
+        <div class="col-6 col-md-3"><div class="feature-card p-3"><img src="assets/merchandise/item3.jpg" class="img-fluid rounded mb-2"><div>T-shirt</div></div></div>
+        <div class="col-6 col-md-3"><div class="feature-card p-3"><img src="assets/merchandise/item4.jpg" class="img-fluid rounded mb-2"><div>Tote Bag</div></div></div>
       </div>
     </div>
   </section>
 
   <!-- Support -->
-  <section id="support" class="section bg-dark text-white text-center">
-    <div class="container" data-aos="fade-up">
-      <h2 class="section-title text-orange">Support Us</h2>
-      <p>Help sustain GyanSetu through donations, volunteering, or sharing our work.</p>
-      <a href="#" class="btn btn-orange">Donate</a>
-      <div class="social-icons mt-3">
-        <a href="#"><i class="bi bi-twitter"></i></a>
-        <a href="#"><i class="bi bi-instagram"></i></a>
-        <a href="#"><i class="bi bi-youtube"></i></a>
+  <section id="support" class="section alt text-center">
+    <div class="container">
+      <h2 class="section-title">Support Us</h2>
+      <p class="mb-3">Help sustain GyanSetu through donations, volunteering, or sharing our work.</p>
+      <a href="#" class="btn btn-primary">Donate</a>
+      <div class="mt-4 fs-4">
+        <a href="#" class="me-3 text-reset"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="me-3 text-reset"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-reset"><i class="bi bi-youtube"></i></a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    &copy; 2025 GyanSetu — Bridging Knowledge Across Time
+  <footer class="py-4 text-center text-muted small">
+    © 2025 GyanSetu — Bridging Knowledge Across Time
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
